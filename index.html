@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmileClinic - Σύγχρονη Οδοντιατρική Φροντίδα</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white text-xl">
+                    <i class="fa-solid fa-tooth animate-pulse"></i>
+                </div>
+                <span class="text-2xl font-extrabold text-slate-900 tracking-tight">Smile<span class="text-blue-600">Clinic</span></span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="#hero" class="text-slate-600 hover:text-blue-600 transition">Αρχική</a>
+                <a href="#services" class="text-slate-600 hover:text-blue-600 transition">Υπηρεσίες</a>
+                <a href="#calculator" class="text-slate-600 hover:text-blue-600 transition">Κοστολόγηση</a>
+                <a href="#appointment" class="text-slate-600 hover:text-blue-600 transition">Ραντεβού</a>
+            </nav>
+            <div>
+                <a href="#appointment" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2.5 rounded-full transition shadow-md hover:shadow-lg hover:shadow-blue-200">
+                    Κλείστε Ραντεβού
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative overflow-hidden py-20 lg:py-32 bg-gradient-to-b from-blue-50/50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide">
+                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-ping"></span>
+                    <span>Πρότυπη Οδοντιατρική Μονάδα</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
+                    Αποκτήστε το <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Χαμόγελο</span> που σας αξίζει
+                </h1>
+                <p class="text-lg text-slate-600 max-w-xl mx-auto lg:mx-0">
+                    Παρέχουμε υψηλού επιπέδου οδοντιατρικές υπηρεσίες με τη χρήση τεχνολογίας αιχμής, σε ένα φιλικό και απόλυτα ασφαλές περιβάλλον.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <a href="#appointment" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-xl transition text-center shadow-lg shadow-blue-200">
+                        <i class="fa-regular fa-calendar-check mr-2"></i>Δωρεάν Πρώτη Επίσκεψη
+                    </a>
+                    <a href="#services" class="border border-slate-300 hover:border-blue-600 hover:text-blue-600 bg-white text-slate-700 font-bold px-8 py-4 rounded-xl transition text-center">
+                        Οι Υπηρεσίες μας
+                    </a>
+                </div>
+                <!-- Trust Elements -->
+                <div class="pt-8 border-t border-slate-200 flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-slate-500">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-star text-amber-500 text-lg"></i>
+                        <span><strong>4.9/5</strong> Αξιολογήσεις</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-user-doctor text-blue-600 text-lg"></i>
+                        <span>Έμπειροι Οδοντίατροι</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-shield-halved text-emerald-500 text-lg"></i>
+                        <span>100% Ανώδυνες Μέθοδοι</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Interactive Image / Graphic -->
+            <div class="relative flex justify-center">
+                <div class="absolute -top-12 -left-12 w-64 h-64 bg-cyan-200 rounded-full mix-blend-multiply filter blur-2xl opacity-40 animate-blob"></div>
+                <div class="absolute -bottom-12 -right-12 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-2xl opacity-40 animate-blob animation-delay-2000"></div>
+                <div class="relative w-full max-w-md bg-white p-6 rounded-3xl shadow-2xl border border-slate-100">
+                    <div class="absolute -top-6 -right-6 bg-emerald-500 text-white p-4 rounded-2xl shadow-lg flex items-center space-x-2">
+                        <i class="fa-solid fa-circle-check text-xl"></i>
+                        <div>
+                            <p class="text-xs opacity-90">Διαθέσιμα Ραντεβού</p>
+                            <p class="font-bold text-sm">Σήμερα & Αύριο</p>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800" alt="Οδοντίατρος SmileClinic" class="rounded-2xl w-full object-cover h-80 shadow-inner" onerror="this.src='https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800'">
+                    <div class="mt-6 flex items-center justify-between">
+                        <div>
+                            <p class="text-xs text-slate-400">Επιστημονικός Υπεύθυνος</p>
+                            <p class="font-bold text-slate-800">Δρ. Γεώργιος Παπαδόπουλος</p>
+                        </div>
+                        <div class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">
+                            Ορθοδοντικός
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-blue-600 font-bold uppercase tracking-wider text-sm">Τι Κάνουμε</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Εξειδικευμένες Οδοντιατρικές Υπηρεσίες</h2>
+                <p class="text-lg text-slate-500">Προσφέρουμε λύσεις για κάθε ανάγκη, από έναν απλό καθαρισμό μέχρι την πιο απαιτητική αισθητική αποκατάσταση.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-blue-500 hover:bg-white hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Αισθητική Οδοντιατρική</h3>
+                    <p class="text-slate-500 leading-relaxed mb-4">Λεύκανση, όψεις πορσελάνης και αισθητικές παρεμβάσεις για το τέλειο, λαμπερό χαμόγελο.</p>
+                    <a href="#appointment" class="text-blue-600 font-bold inline-flex items-center hover:text-blue-800">
+                        Μάθετε περισσότερα <i class="fa-solid fa-arrow-right ml-2 text-sm transition group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-blue-500 hover:bg-white hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-circle-nodes"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Εμφυτεύματα & Χειρουργική</h3>
+                    <p class="text-slate-500 leading-relaxed mb-4">Μόνιμη και απόλυτα ασφαλής αντικατάσταση δοντιών με κορυφαίας ποιότητας υλικά τιτανίου.</p>
+                    <a href="#appointment" class="text-blue-600 font-bold inline-flex items-center hover:text-blue-800">
+                        Μάθετε περισσότερα <i class="fa-solid fa-arrow-right ml-2 text-sm transition group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-blue-500 hover:bg-white hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-shield-virus"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Προληπτική Φροντίδα</h3>
+                    <p class="text-slate-500 leading-relaxed mb-4">Καθαρισμός, φθορίωση και έλεγχος για την αποτελεσματική πρόληψη κάθε οδοντικής πάθησης.</p>
+                    <a href="#appointment" class="text-blue-600 font-bold inline-flex items-center hover:text-blue-800">
+                        Μάθετε περισσότερα <i class="fa-solid fa-arrow-right ml-2 text-sm transition group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Cost Calculator (JavaScript Feature) -->
+    <section id="calculator" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-12">
+                <span class="text-cyan-400 font-bold uppercase tracking-wider text-sm">Interactive Εργαλείο</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold">Υπολογισμός Κόστους Θεραπείας</h2>
+                <p class="text-slate-400 max-w-xl mx-auto">Επιλέξτε τις υπηρεσίες που σας ενδιαφέρουν και δείτε μια εκτίμηση του κόστους σε πραγματικό χρόνο.</p>
+            </div>
+
+            <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-2xl">
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-slate-200 border-b border-slate-700 pb-4">Επιλέξτε Θεραπείες:</h3>
+                    
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <!-- Option 1 -->
+                        <label class="flex items-center p-4 bg-slate-700/50 rounded-xl cursor-pointer hover:bg-slate-700 border border-transparent hover:border-cyan-500 transition">
+                            <input type="checkbox" value="50" class="treatment-calc w-5 h-5 text-cyan-500 rounded focus:ring-0 mr-4">
+                            <div>
+                                <p class="font-bold">Καθαρισμός & Έλεγχος</p>
+                                <p class="text-xs text-slate-400">Εκτίμηση: 50€</p>
+                            </div>
+                        </label>
+                        <!-- Option 2 -->
+                        <label class="flex items-center p-4 bg-slate-700/50 rounded-xl cursor-pointer hover:bg-slate-700 border border-transparent hover:border-cyan-500 transition">
+                            <input type="checkbox" value="180" class="treatment-calc w-5 h-5 text-cyan-500 rounded focus:ring-0 mr-4">
+                            <div>
+                                <p class="font-bold">Λεύκανση Δοντιών</p>
+                                <p class="text-xs text-slate-400">Εκτίμηση: 180€</p>
+                            </div>
+                        </label>
+                        <!-- Option 3 -->
+                        <label class="flex items-center p-4 bg-slate-700/50 rounded-xl cursor-pointer hover:bg-slate-700 border border-transparent hover:border-cyan-500 transition">
+                            <input type="checkbox" value="70" class="treatment-calc w-5 h-5 text-cyan-500 rounded focus:ring-0 mr-4">
+                            <div>
+                                <p class="font-bold">Σφράγισμα (Ρητίνη)</p>
+                                <p class="text-xs text-slate-400">Εκτίμηση: 70€</p>
+                            </div>
+                        </label>
+                        <!-- Option 4 -->
+                        <label class="flex items-center p-4 bg-slate-700/50 rounded-xl cursor-pointer hover:bg-slate-700 border border-transparent hover:border-cyan-500 transition">
+                            <input type="checkbox" value="950" class="treatment-calc w-5 h-5 text-cyan-500 rounded focus:ring-0 mr-4">
+                            <div>
+                                <p class="font-bold">Οδοντικό Εμφύτευμα</p>
+                                <p class="text-xs text-slate-400">Εκτίμηση: 950€</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Discount Slider -->
+                    <div class="pt-6 border-t border-slate-700">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-slate-300 font-medium">Έκπτωση Πρώτης Επίσκεψης (σταθερή):</span>
+                            <span class="text-cyan-400 font-bold" id="discount-val">10%</span>
+                        </div>
+                        <input type="range" id="discount-slider" min="5" max="30" value="10" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-cyan-400">
+                    </div>
+
+                    <!-- Result Panel -->
+                    <div class="mt-8 bg-slate-900 p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between border border-slate-700">
+                        <div class="text-center sm:text-left mb-4 sm:mb-0">
+                            <p class="text-sm text-slate-400">Εκτιμώμενο Συνολικό Κόστος</p>
+                            <p class="text-xs text-slate-500">*Οι τιμές είναι ενδεικτικές</p>
+                        </div>
+                        <div class="text-center sm:text-right">
+                            <span class="text-4xl font-extrabold text-cyan-400" id="total-price">0€</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment & Form Validation Section (PHP/JS Ready) -->
+    <section id="appointment" class="py-20 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-5 gap-12 bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100">
+                
+                <!-- Info Column (2/5) -->
+                <div class="lg:col-span-2 bg-blue-600 text-white p-8 sm:p-12 flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold">Πληροφορίες Επικοινωνίας</h3>
+                        <p class="opacity-90 text-sm leading-relaxed">
+                            Συμπληρώστε τη φόρμα και ο εκπρόσωπός μας θα επικοινωνήσει μαζί σας εντός 2 ωρών για να επιβεβαιώσει το ραντεβού σας.
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-6 my-8">
+                        <div class="flex items-center space-x-4">
+                            <i class="fa-solid fa-phone text-xl text-cyan-300"></i>
+                            <div>
+                                <p class="text-xs opacity-70">Τηλέφωνο</p>
+                                <p class="font-bold">+30 210 1234567</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fa-solid fa-envelope text-xl text-cyan-300"></i>
+                            <div>
+                                <p class="text-xs opacity-70">Email</p>
+                                <p class="font-bold">info@smileclinic.gr</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fa-solid fa-location-dot text-xl text-cyan-300"></i>
+                            <div>
+                                <p class="text-xs opacity-70">Διεύθυνση</p>
+                                <p class="font-bold">Λεωφ. Κηφισίας 124, Αθήνα</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-4 text-xl">
+                        <a href="#" class="hover:text-cyan-300 transition"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="hover:text-cyan-300 transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hover:text-cyan-300 transition"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Form Column (3/5) -->
+                <div class="lg:col-span-3 p-8 sm:p-12">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6">Online Κράτηση Ραντεβού</h3>
+                    
+                    <!-- Alert Message Container (Success / Error) -->
+                    <div id="form-alert" class="hidden mb-6 p-4 rounded-xl text-sm font-semibold"></div>
+
+                    <form id="booking-form" class="space-y-5" novalidate>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Όνομα</label>
+                                <input type="text" id="form-name" class="w-full bg-slate-50 border border-slate-200 focus:border-blue-500 focus:bg-white rounded-xl px-4 py-3 outline-none transition text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Επώνυμο</label>
+                                <input type="text" id="form-lastname" class="w-full bg-slate-50 border border-slate-200 focus:border-blue-500 focus:bg-white rounded-xl px-4 py-3 outline-none transition text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Email</label>
+                            <input type="email" id="form-email" class="w-full bg-slate-50 border border-slate-200 focus:border-blue-500 focus:bg-white rounded-xl px-4 py-3 outline-none transition text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Τηλέφωνο</label>
+                            <input type="tel" id="form-phone" class="w-full bg-slate-50 border border-slate-200 focus:border-blue-500 focus:bg-white rounded-xl px-4 py-3 outline-none transition text-sm" placeholder="69XXXXXXXX">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Υπηρεσία</label>
+                            <select id="form-service" class="w-full bg-slate-50 border border-slate-200 focus:border-blue-500 focus:bg-white rounded-xl px-4 py-3 outline-none transition text-sm">
+                                <option value="">Επιλέξτε θεραπεία...</option>
+                                <option value="cleaning">Προληπτικός Καθαρισμός</option>
+                                <option value="whitening">Αισθητική Λεύκανση</option>
+                                <option value="implant">Εμφύτευμα / Χειρουργική</option>
+                                <option value="general">Γενικός Έλεγχος / Πόνος</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition shadow-lg shadow-blue-200 flex items-center justify-center space-x-2">
+                            <span>Αποστολή Αιτήματος</span>
+                            <i class="fa-solid fa-paper-plane text-sm"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section (JavaScript Animation) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-12">
+                <h2 class="text-3xl font-extrabold text-slate-900">Συχνές Ερωτήσεις</h2>
+                <p class="text-slate-500">Ό,τι χρειάζεται να γνωρίζετε πριν την επίσκεψή σας.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Accordion 1 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition duration-300">
+                    <button class="faq-btn w-full px-6 py-5 flex justify-between items-center text-left font-bold text-slate-800 hover:bg-slate-50 focus:outline-none">
+                        <span>Πόσο διαρκεί μια επίσκεψη για καθαρισμό;</span>
+                        <i class="fa-solid fa-chevron-down transition-transform duration-300 text-slate-400"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-sm text-slate-500 leading-relaxed">
+                        Ο προληπτικός καθαρισμός και ο έλεγχος διαρκούν συνήθως από 30 έως 45 λεπτά. Περιλαμβάνει αφαίρεση τρυγίας (πέτρας), στίλβωση δοντιών και λεπτομερείς οδηγίες στοματικής υγιεινής.
+                    </div>
+                </div>
+
+                <!-- Accordion 2 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition duration-300">
+                    <button class="faq-btn w-full px-6 py-5 flex justify-between items-center text-left font-bold text-slate-800 hover:bg-slate-50 focus:outline-none">
+                        <span>Είναι επώδυνη η διαδικασία των εμφυτευμάτων;</span>
+                        <i class="fa-solid fa-chevron-down transition-transform duration-300 text-slate-400"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-sm text-slate-500 leading-relaxed">
+                        Όχι, η διαδικασία πραγματοποιείται με τοπική αναισθησία και είναι εντελώς ανώδυνη. Για τις επόμενες ημέρες χορηγείται ήπια αναλγητική αγωγή ώστε να αποφευχθεί οποιαδήποτε ενόχληση.
+                    </div>
+                </div>
+
+                <!-- Accordion 3 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition duration-300">
+                    <button class="faq-btn w-full px-6 py-5 flex justify-between items-center text-left font-bold text-slate-800 hover:bg-slate-50 focus:outline-none">
+                        <span>Κάθε πότε πρέπει να επισκέπτομαι τον οδοντίατρο;</span>
+                        <i class="fa-solid fa-chevron-down transition-transform duration-300 text-slate-400"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-sm text-slate-500 leading-relaxed">
+                        Συνιστούμε έναν έλεγχο και καθαρισμό κάθε 6 μήνες για να προλάβουμε τυχόν προβλήματα πριν αυτά εξελιχθούν και απαιτήσουν πιο σύνθετες θεραπείες.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl font-extrabold text-white">Smile<span class="text-blue-500">Clinic</span></span>
+            </div>
+            <p class="text-sm">© 2026 SmileClinic. Σχεδιάστηκε με ❤️ για το Fiverr Portfolio.</p>
+            <div class="flex space-x-6 text-sm">
+                <a href="#" class="hover:text-white transition">Όροι Χρήσης</a>
+                <a href="#" class="hover:text-white transition">Πολιτική Απορρήτου</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script>
+        // 1. Cost Calculator Logic
+        const checkboxes = document.querySelectorAll('.treatment-calc');
+        const discountSlider = document.getElementById('discount-slider');
+        const discountVal = document.getElementById('discount-val');
+        const totalPriceEl = document.getElementById('total-price');
+
+        function calculateCost() {
+            let baseTotal = 0;
+            checkboxes.forEach(box => {
+                if(box.checked) {
+                    baseTotal += parseFloat(box.value);
+                }
+            });
+
+            const discountPercentage = parseFloat(discountSlider.value);
+            discountVal.textContent = `${discountPercentage}%`;
+
+            const finalPrice = baseTotal * (1 - (discountPercentage / 100));
+            totalPriceEl.textContent = `${Math.round(finalPrice)}€`;
+        }
+
+        checkboxes.forEach(box => box.addEventListener('change', calculateCost));
+        discountSlider.addEventListener('input', calculateCost);
+
+        // 2. FAQ Accordion Logic
+        const faqButtons = document.querySelectorAll('.faq-btn');
+        faqButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // 3. Form Validation and Submit Mockup Logic
+        const form = document.getElementById('booking-form');
+        const alertBox = document.getElementById('form-alert');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('form-name').value.trim();
+            const lastname = document.getElementById('form-lastname').value.trim();
+            const email = document.getElementById('form-email').value.trim();
+            const phone = document.getElementById('form-phone').value.trim();
+            const service = document.getElementById('form-service').value;
+
+            // Simple validation rules
+            if (!name || !lastname || !email || !phone || !service) {
+                showAlert('Παρακαλώ συμπληρώστε όλα τα πεδία της φόρμας.', 'danger');
+                return;
+            }
+
+            // Phone validation (exactly 10 digits for greek mobiles/landlines)
+            const phoneRegex = /^[0-9]{10}$/;
+            if (!phoneRegex.test(phone)) {
+                showAlert('Παρακαλώ εισάγετε έναν έγκυρο 10ψήφιο αριθμό τηλεφώνου.', 'danger');
+                return;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showAlert('Παρακαλώ εισάγετε μια έγκυρη διεύθυνση email.', 'danger');
+                return;
+            }
+
+            // If everything is correct: Success!
+            showAlert(`Ευχαριστούμε ${name}! Το αίτημά σας για την υπηρεσία καταχωρήθηκε επιτυχώς. Θα επικοινωνήσουμε μαζί σας σύντομα.`, 'success');
+            form.reset();
+        });
+
+        function showAlert(message, type) {
+            alertBox.textContent = message;
+            alertBox.className = "mb-6 p-4 rounded-xl text-sm font-semibold transition-all duration-300";
+            
+            if (type === 'danger') {
+                alertBox.classList.add('bg-red-50', 'text-red-700', 'border', 'border-red-200');
+            } else {
+                alertBox.classList.add('bg-emerald-50', 'text-emerald-700', 'border', 'border-emerald-200');
+            }
+            alertBox.classList.remove('hidden');
+
+            // Scroll smoothly to alert box
+            alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>
